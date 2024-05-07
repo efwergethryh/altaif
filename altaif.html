@@ -1,0 +1,715 @@
+<head>
+  <style>
+    body {
+      justify-content: center;
+      align-items: center;
+      background-color: #F1F1F1;
+    }
+
+    .wrapper {
+
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 44px;
+      position: relative;
+      left: 20%;
+      top: -450%;
+      display: inline-flex;
+    }
+
+
+
+    .Employees {
+
+      height: 192px;
+      position: relative;
+      background: rgba(254.88, 254.88, 254.88, 0.59);
+      box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      overflow-y: scroll;
+    }
+
+    .Salaries {
+      width: 1359px;
+      height: 104px;
+      position: relative;
+      background: rgba(254.88, 254.88, 254.88, 0.59);
+      box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+    }
+
+    .SubtractionAllocations {
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 13px;
+      display: inline-flex;
+    }
+
+    .Subtract,
+    .Allocations {
+      width: 673px;
+      height: 156px;
+      position: relative;
+      background: rgba(254.88, 254.88, 254.88, 0.59);
+      box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .Frame695 {
+      left: 36px;
+      top: 15px;
+      position: absolute;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 40px;
+      display: inline-flex;
+    }
+
+    .AddressGeneralInfo {
+      width: 1359px;
+      height: 188px;
+      position: relative;
+      background: rgba(254.88, 254.88, 254.88, 0.59);
+      box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .Employees,
+    .Salaries,
+    .SubtractionAllocations,
+    .AddressGeneralInfo,
+    .ProofFiles,
+    .CommandsInfo {
+      width: 1000px;
+    }
+
+    .Frame698 {
+      left: 1222px;
+      top: 17px;
+      position: absolute;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 27px;
+      display: inline-flex;
+    }
+
+    .Frame699 {
+      left: 1007px;
+      top: 14px;
+      position: absolute;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 27px;
+      display: inline-flex;
+    }
+
+    .ProofFiles {
+
+      height: 160px;
+      position: relative;
+      background: rgba(254.88, 254.88, 254.88, 0.59);
+      box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .Frame700 {
+      width: 46px;
+      height: 16px;
+      left: 1283px;
+      top: 62px;
+      position: absolute;
+    }
+
+    .Frame703 {
+      left: 745px;
+      top: 57px;
+      position: absolute;
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: inline-flex;
+    }
+
+    .Frame698 .Frame706 {
+      left: -229px;
+      top: -30px;
+      position: absolute;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 128px;
+      display: inline-flex;
+    }
+
+    .Frame698 .Frame704,
+    .Frame698 .Frame702,
+    .Frame698 .Frame701 {
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+    }
+
+    .CommandsInfo {
+
+      height: 92px;
+      position: relative;
+      background: rgba(254.88, 254.88, 254.88, 0.59);
+      box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .Frame712 {
+      left: 904px;
+      top: 16px;
+      position: absolute;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 4px;
+      display: inline-flex;
+    }
+
+    .command_details {
+      left: 1000px;
+      top: 46px;
+      position: absolute;
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: inline-flex;
+    }
+
+    .command_details p {
+      position: relative;
+      right: -70px;
+    }
+
+    .Employees tbody {
+      position: relative;
+      top: 20px;
+    }
+
+    .Employees th,
+    td {
+      border: none;
+      font-size: small;
+      padding-left: 70px;
+      padding-top: 20px;
+      text-align: right;
+    }
+
+    .Employees tbody {
+      position: relative;
+      top: 20px;
+
+    }
+
+    .Salaries th,
+    .Salaries td {
+      font-size: small;
+      border: none;
+      padding-left: 210px;
+      padding-top: 10px;
+      
+      position: relative;
+      left: -10%;
+      text-align: center;
+
+    }
+
+    .Subtract th,
+    .Subtract td {
+      border: none;
+      padding-left: 70px;
+      padding-top: 20px;
+      text-align: right;
+    }
+
+    .Allocations th,
+    .Allocations td {
+      border: none;
+      padding-left: 70px;
+      padding-top: 20px;
+      text-align: right;
+    }
+
+    .AddEmployees {
+      position: relative;
+      left: 75%;
+      top: 109px;
+      width: 200px;
+      height: 48px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 8px;
+      padding-bottom: 2px;
+      background: #10D096;
+      border-radius: 6px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      display: inline-flex;
+    }
+
+    .Icons {
+      width: 24px;
+      height: 24px;
+      position: relative;
+    }
+
+    .BoundingBox {
+      width: 24px;
+      height: 24px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      background: #D9D9D9;
+    }
+
+    .Add {
+      width: 14px;
+      height: 14px;
+      left: 5px;
+      top: 5px;
+      position: absolute;
+      background: white;
+    }
+
+    .Success {
+      color: white;
+      font-size: 16px;
+      font-family: Roboto;
+      font-weight: 500;
+      word-wrap: break-word;
+    }
+
+    .ShowFiles {
+      position: relative;
+      left: 50%;
+      top: 7px;
+      width: 200px;
+      margin-bottom: 20px;
+      height: 48px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 2px;
+      padding-bottom: 8px;
+      background: #1096D0;
+      border-radius: 6px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      display: inline-flex;
+
+    }
+
+    .ShowFiles .Text {
+      color: white;
+      font-size: 16px;
+      font-family: Roboto;
+      font-weight: 500;
+      word-wrap: break-word;
+    }
+
+    .Sidebar {
+      width: 366px;
+      height: 2641px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      display: inline-flex;
+    }
+
+    .SidebarContent {
+      width: 206px;
+      height: 2641px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 57px;
+      padding-bottom: 57px;
+      background: white;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      display: inline-flex;
+    }
+
+    .Fixenter {
+      width: 276px;
+      height: 120px;
+    }
+
+    .RedText {
+      color: #FE1010;
+      font-size: 44px;
+      font-family: Kalam;
+      font-weight: 400;
+      word-wrap: break-word;
+    }
+
+    .BlackText {
+      color: black;
+      font-size: 44px;
+      font-family: Kalam;
+      font-weight: 400;
+      word-wrap: break-word;
+    }
+
+
+    .Rectangle1 {
+      width: 283px;
+      height: 57px;
+      background: rgba(99.06, 113.64, 190.19, 0);
+      border-radius: 10px;
+    }
+
+    .Rectangle2 {
+      width: 283px;
+      height: 57px;
+      background: rgba(99.06, 113.64, 190.19, 0.36);
+      border-radius: 10px;
+    }
+
+    .Frame28 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 30px;
+      display: flex;
+    }
+
+
+    .Component {
+      position: relative;
+      top: -20%;
+      background: white;
+      border-radius: 10px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 5px;
+      padding: 3px;
+      padding-right: 20px;
+      display: inline-flex;
+
+    }
+
+    .Component:hover {
+      background-color: rgba(99.06, 113.64, 190.19, 0.36);
+    }
+
+
+
+    .Squaresfour,
+    .Group1,
+    .LetsIconsMaterialsLight,
+    .TablerListDetails,
+    .MdiAccountSupervisorOutline {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    .Vector {
+      background: #9d9d9d;
+    }
+
+    .Dashboard,
+    .Projects,
+    .PaymentDocument,
+    .ProjectDetails,
+    .BuyMaterials,
+    .Directions,
+    .CustomersOrders {
+      color: #9d9d9d;
+      font-size: 20px;
+      font-family: Kanit;
+      font-weight: 400;
+      word-wrap: break-word;
+    }
+
+    
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altaif </title>
+</head>
+
+<body>
+  
+  <div class="Sidebar">
+    <div class="SidebarContent">
+      <div class="Fixenter">
+        <span class="RedText">Fix</span>
+        <span class="BlackText">enter</span>
+      </div>
+
+
+      <div class="Rectangle1"></div>
+      <div class="Frame28">
+        <div class="Component">
+          <div class="Squaresfour">
+            <div class="Squaresfour">
+              <div class="Vector"></div>
+            </div>
+          </div>
+          <div class="Dashboard">Dashboard</div>
+        </div>
+        <div class="Component">
+          <div class="Vector"></div>
+          <div class="Projects">Projects</div>
+        </div>
+        <div class="Component">
+          <div class="SolarDocumentBroken">
+            <div class="Vector"></div>
+          </div>
+          <div class="PaymentDocument">Payment document</div>
+        </div>
+        <div class="Component">
+          <div class="Group1">
+            <div class="Vector"></div>
+            <div class="Vector"></div>
+          </div>
+          <div class="ProjectDetails">Project Details</div>
+        </div>
+        <div class="Component">
+          <div class="LetsIconsMaterialsLight">
+            <div class="Group">
+              <div class="Vector"></div>
+              <div class="Vector"></div>
+            </div>
+          </div>
+          <div class="BuyMaterials">Buy Materials</div>
+        </div>
+        <div class="Component">
+
+          <div class="Directions">Directions<br /></div>
+        </div>
+        <div class="Component">
+
+          <div class="CustomersOrders">Customers’ orders</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="AddEmployees">
+
+      <div class="Success">إضافة موظف جديد</div>
+    </div>
+
+    <div class="ShowFiles">
+      <div class="Text">عرض المستمسكات</div>
+    </div>
+
+    <div class="Employees">
+      <table>
+        <thead>
+          <tr>
+            <th>رقم الموظف</th>
+            <th>اسم الموظف</th>
+            <th>العنوان الوظيفي</th>
+            <th>الدرجة</th>
+            <th>المرحلة</th>
+            <th>الراتب الاسمي</th>
+            <th>زيادة مقطوعة</th>
+            <th>عملة الراتب</th>
+            <th>تاريخ المباشرة</th>
+            <th>رقم الأمر</th>
+          </tr>
+
+        </thead>
+        <tbody>
+          <tr>
+            <td>123</td>
+            <td>مصطفى</td>
+            <td>محاسب</td>
+            <td>الخامسه</td>
+            <td>اولى</td>
+            <td>350.000</td>
+            <td>0.000</td>
+            <td>دينار عراقي</td>
+            <td>2024/04/18</td>
+            <td>10</td>
+            <td><input type="checkbox" name="agree" value="yes"></td>
+            <!-- <div class="Line2"
+                style=" position:relative; top: 105px; left: 70px; width: 1280.61px; height: 0px;   border: 1px rgb(218, 216, 216) solid">
+              </div> -->
+          </tr>
+          <tr>
+            <td>123</td>
+            <td>مصطفى</td>
+            <td>محاسب</td>
+            <td>الخامسه</td>
+            <td>اولى</td>
+            <td>350.000</td>
+            <td>0.000</td>
+            <td>دينار عراقي</td>
+            <td>2024/04/18</td>
+            <td>10</td>
+            <td><input type="checkbox" name="agree" value="yes"></td>
+            <!-- <div class="Line2"
+                style=" position:relative; top: 105px; left: 70px; width: 1280.61px; height: 0px;   border: 1px rgb(218, 216, 216) solid">
+              </div> -->
+          </tr>
+          <tr>
+            <td>123</td>
+            <td>مصطفى</td>
+            <td>محاسب</td>
+            <td>الخامسه</td>
+            <td>اولى</td>
+            <td>350.000</td>
+            <td>0.000</td>
+            <td>دينار عراقي</td>
+            <td>2024/04/18</td>
+            <td>10</td>
+            <td><input type="checkbox" name="agree" value="yes"></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+    </div>
+    <div
+      style="width: 178px; text-align: right; position: relative; left: 1170px; color: black; font-size: 14px; font-family: Roboto; font-size: larger; font-weight: 800; word-wrap: break-word">
+      الراتب و الموقع الإداري</div>
+    <div class="Salaries">
+      <table>
+        <thead>
+          <tr>
+            <th>المؤهل العلمي</th>
+            <th>الاختصاص</th>
+            <th>الموقع الإداري</th>
+            <th>المنصب</th>
+          </tr>
+        <tbody>
+          <tr>
+            <td>بكالوريوس</td>
+            <td>تربية انكليزي</td>
+            <td>شعبة خدمات الزبائن</td>
+            <td>بلا</td>
+          </tr>
+        </tbody>
+        </thead>
+      </table>
+    </div>
+    <div
+      style="width: 178px; text-align: right; position: relative; left: 1170px; color: black; font-size: 14px; font-family: Roboto;font-size: larger; font-weight: 700; word-wrap: break-word">
+      المخصصات و الاستقطاعات</div>
+    <div class="SubtractionAllocations">
+      <div class="Subtract">
+        <table>
+          <thead>
+            <tr>
+              <th>اسم الاسقطاع</th>
+              <th>المبلغ</th>
+              <th>نوعه</th>
+              <th>مقداره</th>
+              <th>ارتباط الاستقطاع</th>
+            </tr>
+          <tbody>
+
+          </tbody>
+          </thead>
+        </table>
+      </div>
+      <div class="Allocations">
+        <table>
+          <thead>
+            <tr>
+              <th>اسم المخصص</th>
+              <th>المبلغ</th>
+              <th>نوعه</th>
+              <th>مقداره</th>
+              <th>ارتباط المخصص</th>
+            </tr>
+          <tbody>
+
+          </tbody>
+          </thead>
+        </table>
+      </div>
+    </div>
+    <div
+      style="width: 178px; text-align: right; position: relative; left: 1170px; color: black; font-size: 14px; font-family: Roboto;font-size: larger; font-weight: 700; word-wrap: break-word">
+      العنوان و المعلومات العامة</div>
+
+    <div class="AddressGeneralInfo">
+      <div class="Frame698">
+        <div>عنوان السكن:</div>
+        <div>البريد الألكتروني:</div>
+        <div>استخدام الحاسوب:</div>
+        <div>المهارات:</div>
+      </div>
+      <div class="Frame699">
+        <div>العراق / بغداد / السيدية</div>
+        <div class="ExampleGmailCom">example@gmail.com</div>
+        <div>جيد</div>
+        <div>/</div>
+      </div>
+    </div>
+    <div
+      style="width: 178px; text-align: right; position: relative; left: 1170px; color: black; font-size: 14px; font-family: Roboto;font-size: larger; font-weight: 700; word-wrap: break-word">
+      المعلومات الثبوتية</div>
+
+    <div class="ProofFiles">
+      <div class="Frame700"></div>
+      <div class="Frame703">
+        <div class="Frame698">
+          <div>مديرية الجنسية و المعلومات المدنية</div>
+          <div>جهة الإصدار:</div>
+        </div>
+        <div class="Frame702">
+          <div>12324</div>
+          <div>رقم الوثيقة:</div>
+        </div>
+        <div class="Frame701">
+          <div>البطاقة الوطنية</div>
+          <div>الوثيقة:</div>
+        </div>
+      </div>
+      <div class="Frame711">
+        <div class="Frame710">
+          <div>077744434</div>
+          <div>رقم الهاتف:</div>
+        </div>
+        <div class="Frame709">
+          <div>/</div>
+          <div>معارف في الشركة:</div>
+        </div>
+        <div class="Frame708">
+          <div>2027/12/03</div>
+          <div>تاريخ النفاذ:</div>
+        </div>
+        <div class="Frame707">
+          <div>2022/12/03</div>
+          <div>تاريخ الإصدار:</div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 178px; text-align: right; position: relative; left: 1170px; color: black; font-size: 14px; font-family: Roboto;font-size: larger; font-weight: 700; word-wrap: break-word">
+      المعلومات الإدارية</div>
+
+    <div class="CommandsInfo">
+      <div class="Frame712">
+        <div>استنادا الى الصلاحيات المخولة لنا تقرر تعيين السيد المدرجة أدناه</div>
+        <div class="Frame703">
+          <div>نص الأمر:</div>
+        </div>
+      </div>
+      <div class="command_details">
+        <p>نص الأمر</p>
+        <div>2022/12/03</div>
+        <div>تاريخ تنفيذ الأمر:</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
